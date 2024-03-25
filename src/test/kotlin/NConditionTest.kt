@@ -10,8 +10,12 @@ class NConditionTest : FunSpec({
             NCondition().fooIfIsNumberIsPositive(5) shouldBe "foo"
         }
 
-        test("should return bar if number is not positive") {
+        test("should return foo if number is zero") {
             NCondition().fooIfIsNumberIsPositive(0) shouldBe "bar"
+        }
+
+        test("should return bar if number is zero") {
+            NCondition().fooIfIsNumberIsPositive(-1) shouldBe "bar"
         }
     }
 })
